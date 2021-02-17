@@ -1,1 +1,2 @@
-# 50Days_JS_CSS_HTML_D1
+# 50 Days of JS, HTML, & CSS 
+## Project 1: Expanding Cards
