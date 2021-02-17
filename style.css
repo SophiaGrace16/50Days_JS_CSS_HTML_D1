@@ -15,13 +15,50 @@ body {
     margin: 2rem
 }
 
-/* 
-font family - sets the default font 
-display:flex - sets  up the flex box existence
-flex-direction - determines where the items fall in line row vs column
-align-items - aligns horizontally
-justify-content - aligns vertically
-height - 100vh sets the height to the full monitors height
-overflow - handles what happens with overflow content, hidden means no scroll bars
-margin - hands how much space the boy has between the edge of the screen
-*/
+.container {
+    display: flex;
+    width: 90vw;
+}
+/* 90 vw, if there are 100 slices of the screen we are taking up 90 of them */
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: aliceblue;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
