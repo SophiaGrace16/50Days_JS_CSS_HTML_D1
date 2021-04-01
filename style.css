@@ -63,3 +63,7 @@ body {
         display: none;
     }
 }
+
+p, li, h1 {
+    color: red;
+}
